@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarsCorp | Solana Economy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              background: 'var(--bg-primary)',
+              surface: 'var(--bg-surface)',
+              text: {
+                primary: 'var(--text-primary)',
+                secondary: 'var(--text-secondary)',
+              },
+              border: 'var(--border-color)',
+              solana: {
+                purple: '#9945FF',
+                green: '#14F195',
+                dark: '#121212',
+              },
+              mars: {
+                red: '#C1440E', // Fixed Primary Accent
+                dust: '#C1440E',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        /* Light Mode Defaults */
+        --bg-primary: #F0F2F5;      /* Martian Mist */
+        --bg-surface: #FFFFFF;      /* White Lab */
+        --text-primary: #1F2937;    /* Deep Iron */
+        --text-secondary: #4B5563;
+        --border-color: #CBD5E1;    /* Slate */
+        --glass-bg: rgba(255, 255, 255, 0.7);
+        --glass-border: rgba(203, 213, 225, 0.5);
+      }
+
+      .dark {
+        /* Dark Mode Defaults */
+        --bg-primary: #0A0E27;      /* Deep Space */
+        --bg-surface: #2A1810;      /* Mars Dust (Card Base) - adjusted opacity in glass usually */
+        --text-primary: #E5E7EB;    /* Light Grey for readability (modified Sandstone for contrast) */
+        --text-secondary: #9CA3AF;
+        --border-color: #D97642;    /* Rust - applied with low opacity usually */
+        --glass-bg: rgba(42, 24, 16, 0.6); /* Mars Dust Glass */
+        --glass-border: rgba(217, 118, 66, 0.2); /* Rust Border */
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        overflow-x: hidden;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3f3f46; 
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #52525b; 
+      }
+
+      /* Theme-Aware Glass Panel */
+      .glass-panel {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--glass-border);
+        transition: background 0.3s ease, border-color 0.3s ease;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.2",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "zustand": "https://aistudiocdn.com/zustand@^4.5.0",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.0",
+    "tailwind-merge": "https://aistudiocdn.com/tailwind-merge@^2.2.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
