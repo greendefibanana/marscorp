@@ -80,6 +80,21 @@ Core contracts: TerritoryRegistry (NFT land), CompanyFactory (IPO engine), Produ
 
 ---
 
+## Live Demo
+
+**Experience MarsCorp now:** [marscorp.vercel.app](https://marscorp.vercel.app/)
+
+Built in 4 weeks for the indie.fun hackathon. The live demo showcases:
+- Isometric 3D Mars terrain with claimable territories
+- Real-time resource production simulation
+- Company IPO launch flow with bonding curves
+- Trading interface with live price discovery
+- Prediction market creation and betting
+
+This isn't vaporware—it's playable today. Experience the future of on-chain economies firsthand.
+
+---
+
 ## Tokenomics: $MARS
 
 Platform governance token with real utility:
@@ -87,7 +102,6 @@ Platform governance token with real utility:
 - Required for territory claims  
 - Staking boosts yield percentages
 - Governance voting weight
-- **Deflationary:** 50% of all platform fees buy and burn $MARS
 
 Total supply: 1B tokens, heavily vested over 4 years to prevent dumps.
 
